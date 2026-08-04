@@ -38,10 +38,9 @@ class TankDrive(private val hardwareMap : HardwareMap) : Subsystem {
         leftMotorPower = (traslation + rotation).coerceIn(-1.0, 1.0)
         rightMotorPower = (traslation - rotation).coerceIn(-1.0,1.0)
 
-        if(abs(leftJoystick) > 0.2 || abs(rightJoystick) > 0.2){
-            leftMotor.set(leftMotorPower)
-            rightMotor.set(rightMotorPower)
-        }
+        leftMotor.set(leftMotorPower)
+        rightMotor.set(rightMotorPower)
+
 
 
     }
